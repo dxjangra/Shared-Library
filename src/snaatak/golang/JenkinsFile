@@ -1,0 +1,11 @@
+@Library('my-shared-library') _
+
+def MY = new snaatak.template.GolangCI()
+
+node{
+def repoUrl = 'https://github.com/OT-MyGurukulam/Golang-API.git'
+def branchName = 'main'
+def credentialsId = 'src-lib'
+MY.call(repoUrl, credentialsId, branchName)
+
+}
